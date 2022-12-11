@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+<style>
+    nav {background: #797979;
+        direction: rtl;
+        text-align: right;
+        padding-right: 15px;
+        margin: 15px 5px;
+        }
+    ul.menu{display:inline-block;margin-right: 20px;}
+
+    img {margin-top: 15px; position: absolute;
+        }
+    ul.menu li{display: inline-block;
+               list-style: none;
+               position: relative;
+            }
+
+    ul.menu li a {display:inline-block;
+                  padding: 12px;
+                  color: #fff;
+                  text-decoration: none;
+                  transition: all 0.2s;
+                 }
+    ul.submenu { display: none;
+                 position: absolute;
+                 width: 160px;
+                 top:42px;
+                 background: #a2a2a2;
+               }
+    ul.menu li i {vertical-align: middle;
+                 margin-right: 5px;
+                 }
+
+                
+    ul.menu li a:hover {background: red;
+
+                 }
+    ul.menu li:hover ul.submenu {display: block;
+                                background: #4ad854;
+                                width: 160px;
+
+                                }
+    ul.submenu li{display: block;
+                  border-bottom: 1px solid #fff;
+                 }
+    ul.submenu li a { display: block;}
+</style>
+</head>
+
+<body>
+    <header>
+    <nav>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Jw2cJRnIjTQwOVpryhFuBsc1WmqjSi2IqA&usqp=CAU" width="50px"; height="50px">
+        <ul class="menu">
+            <li>
+                <a href="">آموزش‌ها</a>
+            </li>
+            <li>
+                <a href="">مقالات</a>
+            </li>
+            <li>
+                <a href="">درسنامه <i class="fa fa-caret-down"></i></a>
+                <ul class="submenu">
+                    <li>
+                        <a href="">ریاضی</a>
+                    </li>
+                    <li>
+                        <a href="">فیزیک</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">کتاب‌ها</a>
+            </li>   
+        </ul>
+    
+    </nav>
+    </header>
+    
+        
+    </body>
+    </html>

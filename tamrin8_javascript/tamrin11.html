@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    var numbersArray = [1, 13, 22, 13, 49];
+    document.write("Array is: ")
+    document.write(numbersArray + "<br>");
+    for (let i = 0; i < numbersArray.length; i++) {
+        for (let j = 0; j < numbersArray.length; j++) {
+            if (i !== j) {
+                if (numbersArray[i] == numbersArray[j]) {
+
+                    document.write(numbersArray[i]);
+                    document.write("<br>");
+                }
+            }
+        }
+    }
+
+</script>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+ <title>Document</title>
+
+<style>
+/* nav style */
+nav {background: #797979;
+        direction: rtl;
+        text-align: right;
+        padding-right: 15px;
+        margin-top: 15px;
+        }
+    ul.menu{display:inline-block;margin-right: 20px;}
+
+    img.nav {margin-top: 15px; position: absolute;
+        }
+    ul.menu li{display: inline-block;
+               list-style: none;
+               position: relative;
+            }
+
+    ul.menu li a {display:inline-block;
+                  padding: 12px;
+                  color: #fff;
+                  text-decoration: none;
+                  transition: all 0.2s;
+                 }
+    ul.submenu { display: none;
+                 position: absolute;
+                 width: 160px;
+                 top:42px;
+                 background: #a2a2a2;
+                 z-index: 1;
+               }
+    ul.menu li i {vertical-align: middle;
+                 margin-right: 5px;
+                 }
+
+                
+    ul.menu li a:hover {background: red;
+
+                 }
+    ul.menu li:hover ul.submenu {display: block;
+                                background: #4ad854;
+                                width: 160px;
+
+                                }
+    ul.submenu li{display: block;
+                  border-bottom: 1px solid #fff;
+                 }
+    ul.submenu li a { display: block;}
+/* body style */
+
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1b1b1b;
+             }
+
+.outer-container {
+                  width: 80%;
+                  margin: 0 auto;
+                 } 
+
+footer {
+        padding: 15px 0;
+        text-align: center;
+        border: 2px solid rgb(41, 245, 0);
+        color: black;
+        background-color: lightgreen;
+        }
+
+.row {
+      margin: 30px 0;
+      padding: 15px 0;
+      background-color: #fff;
+      border: 2px solid red;
+      height: 480px;
+    }
+
+.box {
+    height: 450px;
+    font-size: 1em;
+    background-color: rgb(208, 200, 200);
+    color: seashell;
+    padding-bottom: 20px;
+    margin:10px
+    }
+
+main {
+        width: 68%;
+        float: right;
+        margin: 0 1%;
+        position: relative;
+        }
+
+aside {
+       width: 28%;
+       float: right;
+       margin: 0 1%;
+       
+}
+
+
+.clearfix {
+          clear: both;
+          }
+
+img.main{position: absolute;
+        top:50px;
+        left:50px}
+
+.box .div_2_main{position: absolute;
+                left: 320px;
+                color: rgb(0, 0, 0);
+                top: 25px;
+                text-align: justify;
+                margin-right: 10px;}
+
+.box .news{font-size: 1em;
+            color: rgba(0, 0, 0, 1);
+            margin-left: 25px;
+            list-style-type: square;}
+
+footer .a_footer{text-decoration: none;
+                color:#e84105;
+                }
+
+footer .a_footer:hover{background-color:hsl(145, 80%, 50%);
+                      font-size: x-large;
+                    transition: all 0.4s;}
+
+                    
+/* .div_2_main .main_ul{overflow: scroll;} */
+
+
+</style>
+
+
+<!-- menu -->
+<head>
+
+    <title>mainpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="outer-container">
+        <header>
+            <nav>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Jw2cJRnIjTQwOVpryhFuBsc1WmqjSi2IqA&usqp=CAU" class="nav" width="50px"; height="50px">
+                <ul class="menu">
+                    <li>
+                        <a href="">آموزش‌ها</a>
+                    </li>
+                    <li>
+                        <a href="">مقالات</a>
+                    </li>
+                    <li>
+                        <a href="">درسنامه <i class="fa fa-caret-down"></i></a>
+                            <ul class="submenu">
+                            <li>
+                                <a href="">ریاضی</a>
+                            </li>
+                            <li>
+                                <a href="">فیزیک</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">کتاب‌ها</a>
+                    </li>   
+                </ul>
+        </nav>
+        </header>
+
+        <div class="row">
+<!-- main -->
+            <main class="box">
+                <div class="div_1_main">
+                    <img class="main" src="data:image/jpeg;base64,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" alt="iphone 13 promax">
+                </div>
+                <div class="div_2_main">
+                    <h4>The product is refurbished and is fully functional. Backed by the 90-day Amazon Renewed Guarantee.</h4>
+                    <ul class="main_ul">
+                        <li>This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple. </li>
+                        <li>Products correspond to one of the following cosmetic conditions: Excellent condition - no signs of cosmetic damage when held 12 inches away. Good condition - Light scratches, barely visible when holding the device 12 inches away. Acceptable condition - Scratches visible when holding the device 12 inches away and perceptible to the touch. </li>
+                        <li>Accessories may not be original, but will be compatible and fully functional. Product may come in generic box. </li>
+                        <li>Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included. </li>
+                        <li> This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected. </li>
+                        <li>Refurbished phones are not guaranteed to be waterproof. </li>
+                        
+                    </ul>
+                </div>
+                
+            </main>
+
+<!-- aside -->
+            <aside class="box">
+                <h5 class="news"><ul>News</ul></h5>
+                <ul class="news">
+                    <li>New models</li>
+                    <li>Prices</li>
+                    <li>Plans</li>
+                    <li>Customers</li>
+                    <li>Shop</li>
+                    <li>Companies</li>
+                </ul>
+
+            </aside>
+
+<!-- clearfix -->
+            <div class="clearfix"></div>
+        </div>
+
+<!-- footer -->
+        <footer>
+            <h3>Make Money with Us</h3>
+            <a class="a_footer" href="#">Sell products on Amazon</a><br>
+            <a class="a_footer"href="#">Sell apps on Amazon</a><br>
+            <a class="a_footer"href="#">Supply to Amazon</a><br>
+            <a class="a_footer"href="#">Protect & Build Your Brand</a><br>
+            <a class="a_footer"href="#">Become an Affiliate</a><br>
+            <a class="a_footer"href="#">Become a Delivery Driver</a><br>
+            <a class="a_footer"href="#">Start a package delivery business</a><br>
+
+        </footer>
+
+
+
+
+    </div>
+    
+
+
+
+
+    
+</body>
+      
+</html>

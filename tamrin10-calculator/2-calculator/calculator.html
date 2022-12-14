@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        input[type=button] {
+            width: 30px;
+            height: 30px;
+            margin: 2px;
+        }
+
+        div.frame {
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(40, 40, 40);
+            padding: 5px;
+        }
+        input[type=text]{
+            background-color: rgb(184, 178, 170);
+            margin-bottom: 10px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <form name="calculator">
+            <div class="screen">
+                <input type="text" name="input">
+            </div>
+            <div class="first_row">
+                <input type="button" value="1" onclick="calculator.input.value+='1'">
+                <input type="button" value="2" onclick="calculator.input.value+='2'">
+                <input type="button" value="3" onclick="calculator.input.value+='3'">
+                <input type="button" value="+" onclick="calculator.input.value+='+'">
+            </div>
+            <div class="second_row">
+                <input type="button" value="4" onclick="calculator.input.value+='4'">
+                <input type="button" value="5" onclick="calculator.input.value+='5'">
+                <input type="button" value="6" onclick="calculator.input.value+='6'">
+                <input type="button" value="-" onclick="calculator.input.value+='-'">
+            </div>
+            <div class="third_row">
+                <input type="button" value="7" onclick="calculator.input.value+='7'">
+                <input type="button" value="8" onclick="calculator.input.value+='8'">
+                <input type="button" value="9" onclick="calculator.input.value+='9'">
+                <input type="button" value="*" onclick="calculator.input.value+='*'">
+            </div>
+            <div class="fourth_row">
+                <input type="button" value="c" onclick="calculator.input.value =''">
+                <input type="button" value="0" onclick="calculator.input.value+='0'">
+                <input type="button" value="=" onclick="calculator.input.value=eval(calculator.input.value)">
+                <input type="button" value="/" onclick="calculator.input.value+='/'">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

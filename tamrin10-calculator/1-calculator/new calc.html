@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="previous-operand"></div>
+            <div class="current-operand"></div>
+        </div>
+
+
+
+    </div>
+</body>
+
+<script>
+    (function welcome() {
+        alert("welcome to my simple calculator, press f12 to open your log window and then 'OK' to continue...")
+    })()
+
+    var f_number = Number(prompt("enter the first number:"));
+    var sec_number = Number(prompt("enter the second number:"));
+    var operation = prompt("now select your operation( + , - , * , / ):")
+
+    if (operation == "+") {
+        sum();
+    }
+    if (operation == "-") {
+        minus();
+    }
+    if (operation == "*") {
+        multiply();
+    }
+    if (operation == "/") {
+        devide();
+    }
+
+    function sum(x, y) {
+        x = f_number;
+        y = sec_number;
+        console.log(x, " + ", y, " = ", x + y);
+    }
+    function minus(x, y) {
+        x = f_number;
+        y = sec_number;
+        console.log(x, " - ", y, " = ", x - y);
+    }
+    function multiply() {
+        x = f_number;
+        y = sec_number;
+        console.log(x, " * ", y, " = ", x * y);
+    }
+    function devide(x, y) {
+        x = f_number;
+        y = sec_number;
+        console.log(x, " / ", y, " = ", x / y);
+    }
+
+
+</script>
+
+</html>

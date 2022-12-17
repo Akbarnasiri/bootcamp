@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>animation</title>
+    <style>
+        .outer-div{
+            background-color: rgb(246, 185, 185);
+            margin: 5px;
+            padding: 5px;
+            width: 98%;
+            height:fit-content;
+        }
+        .clearfix{
+            clear: both;
+        }
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(215, 33, 100);
+            position: relative;
+            margin: 10px;
+        }
+
+        .inner {
+            width: 80px;
+            height: 80px;
+            background-color: rgb(215, 215, 33);
+            position: absolute;
+        }
+
+        .animation {
+            float: left;
+        }
+
+        .image {
+            float: left;
+            margin: 50px;
+        }
+
+        .image img {
+            width: 400px;
+            height: 400px;
+        }
+
+        button {
+            background-color: rgb(113, 199, 170);
+            border-radius: 10px;
+            padding: 10px;
+            width: 80px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-div">
+        <div class="animation">
+            <button type="button" onclick="myMove()">Try</button>
+            <div class="container">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./coffee1.jpg" alt="espresso">
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+
+<script>
+    function myMove() {
+        var inner = document.getElementsByClassName('inner')[0];
+        var pos = 0;
+        var id = setInterval(move, 5);
+        var img = document.getElementsByTagName("img")[0];
+        var time = 0;
+        var timeid = setInterval(change, 1000)
+
+        function move() {
+            if (pos == 320) { clearInterval(id) }
+            else {
+                pos++;
+                inner.style.top = pos + "px";
+                inner.style.left = pos + "px";
+            }
+        }
+
+        function change() {
+            img.src = "./coffee2.jpg";
+            clearInterval(timeid);
+        }
+
+    }
+
+
+</script>
+
+
+
+</html>
+
+</html>

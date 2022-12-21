@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./table.js" defer></script>
+
+    <style>
+        .form {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .input {
+            margin: 5px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(222, 240, 255);
+            box-shadow: 1px 1px 2px;
+
+        }
+
+        .sub_btn {
+            padding: 5px;
+            margin: 5px;
+            background-color: rgb(222, 222, 95);
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px;
+        }
+
+        span {
+            padding: 5px;
+            margin: 5px;
+
+        }
+
+        .sub_btn:hover {
+            background-color: rgb(223, 223, 48);
+            box-shadow: 5px 10px 18px rgb(196, 199, 14);
+            padding: 6px;
+            transition: padding 0.4s;
+        }
+
+        .table,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            border-collapse: collapse;
+            background-color: rgb(186, 167, 143);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="form" id="form" class="form">
+        <div>
+            <label for="f_name">first name:</label>
+            <input type="text" id="f_name" class="f_name input">
+        </div>
+        <div>
+            <label for="l_name">last name:</label>
+            <input type="text" id="l_name" class="l_name input">
+        </div>
+    </form>
+    <div>
+        <input type="submit" class="sub_btn" id="sub_btn" onclick="addTask()"><br>
+        <span id="error"></span>
+    </div>
+
+    <table class="table" id="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>first name</th>
+                <th>last name</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+</body>
+<!-- <script>
+
+    function info(row_num, fname, lname, operation) {
+        this.row_num = row_num;
+        this.firstname = fname;
+        this.lastname = lname;
+        this.operation = operation;
+    }
+
+    // var list = [];
+    // var name = null;
+    // var family = null;
+    var sub_count = 0;
+    function addtask() {
+
+        sub_count++;
+
+        name = document.getElementById("f_name").value;
+        family = document.getElementById("l_name").value;
+
+        var table = document.getElementById('table');
+
+        const tbl_body = document.createElement("tbody");
+        const tbl_tr = document.createElement("tr");
+        const row_num = document.createElement("td");
+        const name_td = document.createElement("td");
+        const family_td = document.createElement("td");
+        const operation = document.createElement("td");
+
+        tbl_tr.appendChild(row_num);
+        tbl_tr.appendChild(name_td);
+        tbl_tr.appendChild(family_td);
+        tbl_tr.appendChild(operation);
+        tbl_body.appendChild(tbl_tr);
+        table.appendChild(tbl_body);
+
+        for (let i = 1; i <= sub_count; i++) {
+            row_num.innerHTML = i;
+            name_td.innerHTML = name;
+            family_td.innerHTML = family;
+            operation.innerHTML = "<button onclick='remove_row(this)'>remove</button>" + "<button onclick='edit()'>edit</button>";
+            // var row = new info(i, name, family, operation.innerHTML);
+            list.push(
+                {
+                    row_number: i,
+                    firstname: name,
+                    lastname: family,
+                    act: operation.innerHTML
+                }
+            )
+        }
+        console.log(list);
+        // console.log(info[1]);
+        document.getElementById("f_name").value = null;
+        document.getElementById("l_name").value = null;
+        document.getElementById("f_name").focus();
+
+    }
+
+
+    function remove_row(btn) {
+
+    }
+
+
+
+
+
+
+</script> -->
+
+</html>
